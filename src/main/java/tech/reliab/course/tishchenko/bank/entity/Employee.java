@@ -1,2 +1,4 @@
-package tech.reliab.course.tishchenko.bank.entity;public class Employee {
+package tech.reliab.course.tishchenko.bank.entity;
+
+public class Employee {
 }

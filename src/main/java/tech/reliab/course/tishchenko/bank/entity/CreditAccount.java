@@ -1,2 +1,4 @@
-package tech.reliab.course.tishchenko.bank.entity;public class CreditAccount {
+package tech.reliab.course.tishchenko.bank.entity;
+
+public class CreditAccount {
 }
