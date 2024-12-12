@@ -66,7 +66,7 @@ public class BankOffice {
                 "Название: " + name + '\n' +
                 "Адрес: " + address + '\n' +
                 "Статус: " + toRusAtmStatus(status) + '\n' +
-                "Можно ли разместить банкомат: " + canPlaceAtm + '\n' +
+                "Можно ли разместить банкомат: " + toRusBoolean(canPlaceAtm) + '\n' +
                 "Число банкоматов: " + numberOfAtms + '\n' +
                 "Возможность оформления кредита: " + toRusBoolean(canIssueLoans) + '\n' +
                 "Возможность выдачи наличных: " + toRusBoolean(canDispenseCash) + '\n' +

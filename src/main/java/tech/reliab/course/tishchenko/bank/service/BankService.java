@@ -23,6 +23,4 @@ public interface BankService extends BaseOperationsService<Bank>{
     void removeEmployee(Bank bank);
 
     void removeClient(Bank bank);
-
-    Bank getBankIfExists(int id);
 }

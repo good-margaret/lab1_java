@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
-public class BankServiceImpl {
+public class BankServiceImpl implements BankService {
     private static int banksCount = 0;
 
     private UserService userService;
@@ -61,7 +61,7 @@ public class BankServiceImpl {
      * @param name Новое название банка.
      */
     public void update(int id, String name) {
-        Bank bank = getBankIfExists(id);
+        Bank bank = getByIdIfPossible(id);
         bank.setName(name);
     }
 
@@ -71,7 +71,7 @@ public class BankServiceImpl {
      * @param id Идентификатор банка.
      */
     public void delete(int id) {
-        Bank bank = getBankIfExists(id);
+        Bank bank = getByIdIfPossible (id);
         banks.remove(bank);
         userService.deleteBank(bank);
     }
@@ -83,7 +83,7 @@ public class BankServiceImpl {
      * @return Банк, если он найден.
      * @throws NoSuchElementException Если банк не найден.
      */
-    public Bank getBankIfExists(int id) {
+    public Bank getByIdIfPossible(int id) {
         return getById(id).orElseThrow(() -> new NoSuchElementException("Bank was not found"));
     }
 
